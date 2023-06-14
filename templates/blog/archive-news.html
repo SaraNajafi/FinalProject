@@ -1,0 +1,10 @@
+<div class="archive-posts">
+    <h4>Archive Posts</h4>
+    <ul>
+        {% for name,count in month_posts.items %}
+        {% if count.0 != 0 %}
+        <li><a href="{% url 'blog:archive' published_month=count.1 %}">{{name}} ({{count.0}})</a></li>
+        {% endif %}
+        {% endfor %}
+    </ul>
+</div>

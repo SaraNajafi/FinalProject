@@ -1,0 +1,19 @@
+
+			<div class="row">
+                {% for post in posts %}
+				<div class="col-lg-4 col-md-6">
+					<div class="single-latest-news">
+						<a href="single-news.html"><img src="{{ post.image.url }}"></a>
+						<div class="news-text-box">
+							<h3><a href="{% url 'blog:single' pid=post.id %}">{{ post.title }}</a></h3>
+							<p class="blog-meta">
+								<span class="author"><i class="fas fa-user"></i> {{ post.author.get_full_name }}</span>
+								<span class="date"><i class="fas fa-calendar"></i>{{ post.published_date }}</span>
+							</p>
+							<p class="excerpt">{{ post.content|truncatewords:20}}</p>
+							<a href="{% url 'blog:single' pid=post.id %}" class="read-more-btn">read more <i class="fas fa-angle-right"></i></a>
+						</div>
+					</div>
+				</div>
+                {% endfor %}
+			</div>
