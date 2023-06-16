@@ -13,8 +13,12 @@ class Contact(models.Model):
 
 
     class Meta:
-        ordering=('-created_date',)
+        ordering=('created_date',)
 
 
     def __str__(self):
         return self.subject
+
+    
+class Newsletter(models.Model):
+    email = models.EmailField()

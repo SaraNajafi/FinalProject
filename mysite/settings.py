@@ -38,7 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
-    'blog'
+    'blog',
+    'accounts'
 ]
 
 MIDDLEWARE = [
@@ -52,6 +53,17 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'mysite.urls'
+
+
+#authentication
+AUTHENTICATION_BACKENDS = [
+'django.contrib.auth.backends.ModelBackend',
+'django.contrib.auth.backends.AllowAllUsersModelBackend',
+'django.contrib.auth.backends.RemoteUserBackend',
+
+]
+
+
 
 TEMPLATES = [
     {
@@ -100,6 +112,14 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+# settings.py
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sara.najafi.ch@gmail.com'
+EMAIL_HOST_PASSWORD = 'gchspziomsaoaxbw'
+EMAIL_USE_TLS = True 
 
 
 # Internationalization
