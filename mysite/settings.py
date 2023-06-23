@@ -28,6 +28,10 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+#site framework
+SITE_ID = 2
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -38,8 +42,13 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'website.apps.WebsiteConfig',
+    'django.contrib.sites',
+    'django.contrib.sitemaps',
+    'taggit',
+    'django_summernote',
     'blog',
-    'accounts'
+    'accounts',
+    
 ]
 
 MIDDLEWARE = [

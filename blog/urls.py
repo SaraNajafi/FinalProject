@@ -11,5 +11,6 @@ urlpatterns = [
     path('archive/<int:published_month>', archive_view, name='archive'),
     path('author/<str:author_username>', news_view, name='author'),
     path('search/', blog_search, name='search'),
+    path('tags/<str:tag_name>', news_view, name='tag'),
     
 ]
