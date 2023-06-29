@@ -34,10 +34,19 @@ INSTALLED_APPS = [
     'django.contrib.sitemaps',
     'taggit',
     'django_summernote',
+    'compressor',
     'blog',
     'accounts',
     
 ]
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+]
+
+COMPRESS_ROOT = '/home/sotoon/Documents/GitHub/FinalProject/static/'
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -81,7 +90,8 @@ TEMPLATES = [
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
-
+COMPRESS_ENABLED = True
+COMPRESS_OFFLINE = True
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
