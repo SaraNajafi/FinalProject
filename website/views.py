@@ -31,5 +31,5 @@ def newsletter_view(request):
         else: 
             return HttpResponseRedirect('/')
 
-def initial_page_view(request):
-    return render(request, 'comming-soon.html')
+# def initial_page_view(request):
+#     return render(request, 'comming-soon.html')
