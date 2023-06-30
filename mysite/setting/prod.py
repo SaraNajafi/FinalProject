@@ -25,6 +25,17 @@ DATABASES = {
 }
 
 
+# DATABASES = {
+#     'default': {  
+#         'ENGINE': 'django.db.backends.mysql',  
+#         'NAME': 'saranaja_mydatabase',  
+#         'USER': 'saranaja_sara',  
+#         'PASSWORD': 'Khakhs7394!',  
+#         'HOST': 'localhost',  
+#         'PORT': '3306',  
+#     }  
+# }
+
 STATIC_ROOT=BASE_DIR / 'static'
 MEDIA_ROOT=BASE_DIR / 'media'
 
